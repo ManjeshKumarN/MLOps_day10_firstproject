@@ -1,0 +1,2 @@
+Setting up mangodb as data source
+following the data science lifecycle
