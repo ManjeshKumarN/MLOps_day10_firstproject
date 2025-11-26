@@ -1,2 +1,4 @@
 Setting up mangodb as data source
 following the data science lifecycle
+
+In mangodb the structure is : Organisation --> Project --> Cluster
