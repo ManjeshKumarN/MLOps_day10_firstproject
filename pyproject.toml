@@ -3,6 +3,9 @@ name = "src"
 version = "0.0.1"
 description = "An MLOps project for productionizing models"
 authors = [{name = "Manjesh", email = "manjesh2700c@gmail.com"}]
+dependencies = [
+    "ipykernel>=7.1.0",
+]
 
 [tool.setuptools]
 packages = {find = {}}
