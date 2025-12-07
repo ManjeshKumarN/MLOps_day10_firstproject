@@ -23,3 +23,16 @@ logging.critical("This is a critical message.")
 # Any other file that imports logging or from src.logger import logging just inherits the already-configured root logger.
 
 # Logging works everywhere automatically
+
+# ----------------------------------------------------------------------------------------
+
+# # below code is to check the exception config
+from src.logger import logging
+from src.exception import MyException, MycustomException
+import sys
+
+try:
+    a = 1+'Z'
+except Exception as e:
+    logging.info(e)
+    raise MycustomException(e)

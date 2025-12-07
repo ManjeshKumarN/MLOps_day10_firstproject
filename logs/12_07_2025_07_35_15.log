@@ -1,0 +1,6 @@
+[ 2025-12-07 07:35:15,143 ] root - DEBUG - This is a debug message.
+[ 2025-12-07 07:35:15,144 ] root - INFO - This is an info message.
+[ 2025-12-07 07:35:15,144 ] root - WARNING - This is a warning message.
+[ 2025-12-07 07:35:15,144 ] root - ERROR - This is an error message.
+[ 2025-12-07 07:35:15,144 ] root - CRITICAL - This is a critical message.
+[ 2025-12-07 07:35:15,146 ] root - INFO - unsupported operand type(s) for +: 'int' and 'str'

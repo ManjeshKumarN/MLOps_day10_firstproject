@@ -1,0 +1,12 @@
+[ 2025-12-07 07:43:06,332 ] root - DEBUG - This is a debug message.
+[ 2025-12-07 07:43:06,332 ] root - INFO - This is an info message.
+[ 2025-12-07 07:43:06,332 ] root - WARNING - This is a warning message.
+[ 2025-12-07 07:43:06,333 ] root - ERROR - This is an error message.
+[ 2025-12-07 07:43:06,333 ] root - CRITICAL - This is a critical message.
+[ 2025-12-07 07:43:06,335 ] root - INFO - unsupported operand type(s) for +: 'int' and 'str'
+[ 2025-12-07 07:43:06,337 ] root - ERROR - Traceback (most recent call last):
+  File "/workspaces/MLOps_day10_firstproject/./demo.py", line 35, in <module>
+    a = 1+'Z'
+        ~^~~~
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
