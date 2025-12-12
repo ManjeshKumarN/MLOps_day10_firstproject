@@ -3,3 +3,4 @@ src.egg-info/
 uv.lock
 __pycache__/
 .vscode/
+/artifact

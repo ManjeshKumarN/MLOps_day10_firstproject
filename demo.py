@@ -27,12 +27,19 @@ logging.critical("This is a critical message.")
 # ----------------------------------------------------------------------------------------
 
 # # below code is to check the exception config
-from src.logger import logging
-from src.exception import MyException, MycustomException
-import sys
+# from src.logger import logging
+# from src.exception import MyException, MycustomException
+# import sys
 
-try:
-    a = 1+'Z'
-except Exception as e:
-    logging.info(e)
-    raise MycustomException(e)
+# try:
+#     a = 1+'Z'
+# except Exception as e:
+#     logging.info(e)
+#     raise MycustomException(e)
+
+# -----------------------------------------------------
+# for data ingestion
+from src.pipline.training_pipeline import TrainPipeline
+tp = TrainPipeline()
+data_ingestion_artifacts = tp.start_data_ingestion()
+print(data_ingestion_artifacts)
