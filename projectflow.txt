@@ -45,3 +45,38 @@
     To setup the connection url on Windows, open env variable setting option and add a new variable:
     Name: MONGODB_URL, Value = <url>
     Also add "artifact" dir to .gitignore file
+
+
+
+
+
+
+
+
+1.docker run -d --name prometheus-container -p 9090:9090 prom/prometheus:latest  --> to install promethus
+https://psychic-space-spork-5rw6w5xxrgwf44g9-9090.app.github.dev/metrics
+ 
+# to run docker container to get the node exporter for linux
+2.docker run -d \
+  --name=node-exporter \
+  --restart=unless-stopped \
+  -p 9100:9100 \
+  -v "/proc:/host/proc:ro" \
+  -v "/sys:/host/sys:ro" \
+  -v "/:/rootfs:ro" \
+  prom/node-exporter:latest \
+  --path.procfs=/host/proc \
+  --path.sysfs=/host/sys \
+  --path.rootfs=/rootfs
+
+3.docker exec -it prometheus-container cat /etc/prometheus/prometheus.yml -> to see the prometheus.yml file in the running docker container
+
+4.docker cp <container_id>:/etc/prometheus/prometheus.yml ./prometheus.yml -> copy the yaml from container to local 
+docker cp 0e292c551053:/etc/prometheus/prometheus.yml ./prometheus.yml
+
+5.docker cp ./prometheus.yml <container_id>:/etc/prometheus/prometheus.yml -> copy the edited prometheus.yml file from local to running prometheus container
+docker cp ./prometheus.yml 2306cca774d8:/etc/prometheus/prometheus.yml # in the edited prometheus file we are telling the prometheus to motinor even the metrics on port 9100, where node exporter metrics is present 
+
+6.docker restart <container_id> -> to restart the container after updating the '/etc/prometheus/prometheus.yml' file
+
+now need to see both promethus and node jobs in Target health in promethus
