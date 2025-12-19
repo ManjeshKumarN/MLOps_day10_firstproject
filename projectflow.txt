@@ -87,6 +87,6 @@ docker run -d -p 3000:3000 --name=grafana grafana/grafana-enterprise:latest -> t
 admin/admin
 Under data source provide --> the IP of the promethus container ( grafana is used to visulise the monitoring data in promethus and create alerts )
 In grafana can connect to multiple source( including promethus ) to get the data from source and can build different types of visualisations and dashboards and create alerts triggers to emails
-
+The main aim is to host an application in kubernetes , connect and monitoring it with promethus and built dashbords and create alerts using grafana
 
 
