@@ -52,6 +52,7 @@
 
 
 
+# promethues is used to monitoring: by default promethus monitor its own and even the new entities it has to monitor can be added
 
 1.docker run -d --name prometheus-container -p 9090:9090 prom/prometheus:latest  --> to install promethus
 https://psychic-space-spork-5rw6w5xxrgwf44g9-9090.app.github.dev/metrics
@@ -80,3 +81,12 @@ docker cp ./prometheus.yml 2306cca774d8:/etc/prometheus/prometheus.yml # in the 
 6.docker restart <container_id> -> to restart the container after updating the '/etc/prometheus/prometheus.yml' file
 
 now need to see both promethus and node jobs in Target health in promethus
+
+#------------------------------------------------------------------------------
+docker run -d -p 3000:3000 --name=grafana grafana/grafana-enterprise:latest -> to start the grafana service
+admin/admin
+Under data source provide --> the IP of the promethus container ( grafana is used to visulise the monitoring data in promethus and create alerts )
+In grafana can connect to multiple source( including promethus ) to get the data from source and can build different types of visualisations and dashboards and create alerts triggers to emails
+
+
+
