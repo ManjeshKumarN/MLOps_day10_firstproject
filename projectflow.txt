@@ -54,7 +54,9 @@ src/constants -> add constants
 src/entity/config_entity  -> add the configurations ( where to save the output files )
 src/entity/artifact_entity -> the outputs of the component 
 src/components/data_validation -> add the logic to be performed in data validation 
-
+src/pipeline/training_pipeline -> add the validation logic in pipeline
+run demo.py -> after adding the data validation functions
+  
 21. Now work on the "Data Transformation" component the way we did in above step. (add estimator.py to entity folder)
 22. Now work on the "Model Trainer" component the way we did in above step. (add class to estimator.py in entity folder)
 
