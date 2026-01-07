@@ -43,8 +43,10 @@ from src.pipline.training_pipeline import TrainPipeline
 tp = TrainPipeline()
 data_ingestion_artifacts = tp.start_data_ingestion()
 data_validation_artifacts = tp.start_data_validation(data_ingestion_artifact=data_ingestion_artifacts)
+data_tranformation_artifacts = tp.start_data_transformation(data_ingestion_artifact=data_ingestion_artifacts,data_validation_artifact=data_validation_artifacts)
 print("data_ingestion_artifacts:", data_ingestion_artifacts)
 print("data_validation_artifacts:", data_validation_artifacts)
+
 
 
 
